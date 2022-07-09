@@ -58,18 +58,30 @@ function libraryFormSubmit(e) {
     let name = document.getElementById('bookName').value;
     let author = document.getElementById('author').value;
     let type;
-    let fiction = document.getElementById('fiction');
+    let phyics = document.getElementById('phyics');
+    let chemistry = document.getElementById('chemistry');
+    let mathematics = document.getElementById('mathematics');
     let programming = document.getElementById('programming');
-    let cooking = document.getElementById('cooking');
+    let life = document.getElementById('life');
+    let english = document.getElementById('english');
 
-    if (fiction.checked) {
-        type = fiction.value;
+    if (phyics.checked) {
+        type = phyics.value;
+    }
+    else if (chemistry.checked) {
+        type = chemistry.value;
+    }
+    else if (mathematics.checked) {
+        type = mathematics.value;
     }
     else if (programming.checked) {
         type = programming.value;
     }
-    else if (cooking.checked) {
-        type = cooking.value;
+    else if (life.checked) {
+        type = life.value;
+    }
+    else if (english.checked) {
+        type = english.value;
     }
 
     let book = new Book(name, author, type);
